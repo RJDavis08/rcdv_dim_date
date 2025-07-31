@@ -1,0 +1,16 @@
+rcdv_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: aws-0-eu-west-2.pooler.supabase.com   # Updated to match connection string
+      port: 5432                                  # Changed to 5432 for direct connection
+      dbname: postgres                            # Corrected typo from 'postgressql'
+      user: postgres.qwyomcxhldjlsznjnlcc         # Updated to 'postgres'
+      password: '@Phoenix815'    # Ensure this matches your password
+      schema: public
+      threads: 4
+      sslmode: require                            # Required for Supabase
+      keepalives_idle: 0
+      connect_timeout: 10
+      retries: 1
